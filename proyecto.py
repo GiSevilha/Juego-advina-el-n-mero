@@ -1,8 +1,8 @@
-nombre = str(input("¡Hola! ¿Cómo te llamas? ")).capitalize()
-print("¡Bienvenid@!",nombre)
-
 from random import randint
 from time import sleep
+
+nombre = str(input("¡Hola! ¿Cómo te llamas? ")).capitalize()
+print("¡Bienvenid@!",nombre)
 
 aleatorio = randint(1,100)
 print("Bueno, he pensado un número entre 1 y 100, y tienes solo diez intentos para adivinar cuál crees que es este número")
@@ -22,5 +22,7 @@ while intentos < 11:
             print("Respuesta correcta. ¡ENHORABUENA!")
             print(f"Has logrado con {intentos} intentos.")
             break
+        else:
+            print("Ya no tienes intentos disponibles. Quizás la próxima vez tengas más suerte :)")
         intentos += 1
     break
