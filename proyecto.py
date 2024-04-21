@@ -5,13 +5,14 @@ nombre = str(input("¡Hola! ¿Cómo te llamas? ")).capitalize()
 print("¡Bienvenid@!",nombre)
 
 aleatorio = randint(1,100)
-print("Bueno, he pensado un número entre 1 y 100, y tienes solo diez intentos para adivinar cuál crees que es este número")
+print("Bueno, he pensado un número entre 1 y 100, y tienes solo diez intentos para adivinar cuál crees que es este número.")
 intentos = 0
 while intentos < 11:
     for i in range(1,11):
+        intentos += 1
         numero = int(input(f"{i}º Intento: "))
         print("Comparando los números...\n")
-        sleep(1)
+        sleep(0.6)
         if numero < 1 or numero > 100:
             print("Has elegido un número que no está permitido.")
         elif numero < aleatorio:
@@ -22,7 +23,6 @@ while intentos < 11:
             print("Respuesta correcta. ¡ENHORABUENA!")
             print(f"Has logrado con {intentos} intentos.")
             break
-        else:
-            print("Ya no tienes intentos disponibles. Quizás la próxima vez tengas más suerte :)")
-        intentos += 1
     break
+if intentos == 10:
+    print("Lo siento, se han agotado tus intentos.")
