@@ -6,7 +6,7 @@ from time import sleep
 
 aleatorio = randint(1,100)
 print("Bueno, he pensado un número entre 1 y 100, y tienes solo diez intentos para adivinar cuál crees que es este número")
-intentos = 1
+intentos = 0
 while intentos < 11:
     for i in range(1,11):
         numero = int(input(f"{i}º Intento: "))
